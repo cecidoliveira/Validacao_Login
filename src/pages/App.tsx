@@ -26,8 +26,8 @@ const App = () => {
                 <Imagem><img src={img_login} /></Imagem>
                 <Column>
                     <Title>Login</Title>
-                    <Input name="email" placeholder="Email" control={control} errorMessage={errors.email?.message}/>
-                    <Input name="password" type="password" placeholder="Senha" control={control} errorMessage={errors.password?.message}/>
+                    <Input name="email" placeholder="Email" control={control} errorMessage={errors.email?.message} isValid={isValid}/>
+                    <Input name="password" type="password" placeholder="Senha" control={control} errorMessage={errors.password?.message} isValid={isValid}/>
                     <Button title="Entrar" isValid = {isValid}/>
                 </Column>
             </Tela>

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<{ $valid?: boolean; }>`
     width: 80%;
     height: 42px;
     color: #FFF;
 
-    border: 1px solid #575A89;
+    border: 1px solid;
+    border-color: ${props => props.$valid ? "#575A89" : "red"};
     border-radius: 21px;
     overflow: hidden;
     padding: 0 10px;

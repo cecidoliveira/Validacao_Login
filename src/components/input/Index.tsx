@@ -2,10 +2,11 @@ import { Controller } from "react-hook-form";
 import { InputContainer, MenssageErro } from "./InputStyles";
 import { IInputProps } from "./Types";
 
-const Input = ({ control, name, errorMessage, ...rest }: IInputProps) => {
+const Input = ({ control, name, errorMessage,isValid, ...rest }: IInputProps) => {
+  console.log(errorMessage)
   return (
     <>
-    <InputContainer>
+    <InputContainer $valid={errorMessage== null || isValid == true ? true : false}>
       <Controller
         control= {control}
         name= {name}
